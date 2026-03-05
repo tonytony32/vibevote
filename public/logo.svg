@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="20" fill="#060608"/>
+  <text x="64" y="52" font-family="monospace" font-size="38" font-weight="900" fill="#00ff87" text-anchor="middle">VV</text>
+  <text x="64" y="82" font-family="monospace" font-size="13" font-weight="700" fill="#5a5a7a" text-anchor="middle" letter-spacing="3">VOTE</text>
+  <circle cx="24" cy="108" r="4" fill="#00ff87" opacity="0.6"/>
+  <circle cx="40" cy="108" r="4" fill="#00ff87" opacity="0.8"/>
+  <circle cx="56" cy="108" r="4" fill="#00ff87"/>
+  <circle cx="72" cy="108" r="4" fill="#ff3d9a" opacity="0.6"/>
+  <circle cx="88" cy="108" r="4" fill="#5a5a7a" opacity="0.6"/>
+</svg>

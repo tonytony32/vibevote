@@ -1,0 +1,95 @@
+:root {
+  --bg: #060608;
+  --bg2: #0d0d12;
+  --surface: #111118;
+  --border: #1e1e2e;
+  --border2: #2a2a40;
+  --text: #f0f0ff;
+  --text-dim: #5a5a7a;
+  --text-mid: #8888aa;
+  --white: #ffffff;
+
+  /* Neon palette */
+  --neon-green:  #00ff87;
+  --neon-amber:  #ffb800;
+  --neon-cyan:   #00d4ff;
+  --neon-pink:   #ff3d9a;
+  --neon-purple: #a855f7;
+
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-mono:    'DM Mono', monospace;
+  --r: 10px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+/* ── Keyframes ─────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(0.88); }
+  70%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+@keyframes scoreFlash {
+  0%   { color: var(--white); }
+  50%  { color: var(--neon-green); filter: brightness(1.6); }
+  100% { color: var(--white); }
+}
+
+@keyframes ripple {
+  0%   { transform: scale(0.8); opacity: 0.9; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+
+@keyframes scanline {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes winnerPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,184,0,0.5); }
+  50%       { box-shadow: 0 0 0 20px rgba(255,184,0,0); }
+}
+
+@keyframes countUp {
+  from { transform: translateY(6px); opacity: 0; }
+  to   { transform: translateY(0);   opacity: 1; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.anim-fadeUp  { animation: fadeUp 0.4s ease both; }
+.anim-pop     { animation: pop 0.25s cubic-bezier(.36,.07,.19,.97) both; }
+.anim-scoreFlash { animation: scoreFlash 0.4s ease both; }
+.anim-countUp { animation: countUp 0.2s ease both; }

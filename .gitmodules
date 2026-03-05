@@ -1,0 +1,3 @@
+[submodule "CirclesMiniapps"]
+	path = CirclesMiniapps
+	url = https://github.com/tonytony32/CirclesMiniapps.git
